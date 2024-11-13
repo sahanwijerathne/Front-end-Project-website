@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AT Digital</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <img src="images/Logo.png" class="logo" />
+
+        <nav>
+          <a href="#">SERVICES</a>
+          <a href="#">ABOUT US</a>
+          <a href="#">CONTACT US</a>
+          <a href="#">CAREERS</a>
+        </nav>
+        <div class="hamburger-icon" onclick="toggleMenu()">☰</div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>
+          We Crush Your <br />
+          Competitors, Goals, And <br />
+          Sales Records - Without <br />
+          The B.S.
+        </h2>
+        <br />
+        <button>GET FREE CONSULTATION</button>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="container">
+        <div class="service-content1">
+          <img src="images/image 2.png" alt="Icon 1" />
+          <div class="service-text">
+            <h3>Web & Mobile App Development</h3>
+            <br />
+            <p>
+              Your web and mobile Apps are pieces of the puzzle to grow your
+              <br />
+              business. We use frameworks which tailor content and engagement
+              <br />
+              methods to respond to different intents shown by your potential
+              <br />
+              customers who interact with your business online.
+            </p>
+
+            <button>LEARN MORE</button>
+          </div>
+        </div>
+
+        <div class="service-content2">
+          <div class="service-text">
+            <h3>Digital Strategy Consulting</h3>
+            <br />
+            <p>
+              Your digital strategy should complement the overall marketing
+              strategy <br />
+              of the company. In online marketing, each component will never
+              work in <br />
+              isolation and every business needs a different mix. We provide a
+              clear <br />
+              concept and strategic overview to find the most efficient model
+              for <br />
+              your business.
+            </p>
+
+            <button>LEARN MORE</button>
+          </div>
+          <div class="icon0">
+            <img src="images/image 1.png" alt="Icon 2" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h3>Frequently asked questions</h3>
+      <br />
+      <div class="faq-item">
+        <h5 class="faq-question" onclick="toggleFaq(this)">
+          <span>
+            Lorem ipsum dolor sit amet consectetur. Leo at sit eu libero?
+          </span>
+          <span class="icon">+</span>
+        </h5>
+        <br />
+        <div class="faq-content">
+          Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id
+          ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien
+          massa morbi risus sagittis tortor integer.
+        </div>
+      </div>
+      <br />
+      <div class="faq-item">
+        <h5 class="faq-question" onclick="toggleFaq(this)">
+          <span>
+            Lorem ipsum dolor sit amet consectetur. Tortor scelerisque integer?
+          </span>
+          <span class="icon">+</span>
+        </h5>
+        <br />
+        <div class="faq-content">Answer to the second question goes here.</div>
+      </div>
+      <br />
+      <div class="faq-item">
+        <h5 class="faq-question" onclick="toggleFaq(this)">
+          <span>
+            Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque nunc?
+          </span>
+          <span class="icon">+</span>
+        </h5>
+        <br />
+        <div class="faq-content">Answer to the third question goes here.</div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section1">
+          <img src="images/Logo.png" class="logo" /><br /><br />
+          <p>
+            Your goal is our target. Not anything in between. We use <br />
+            online marketing platforms and tools to achieve a single <br />
+            objective - your business results.
+          </p>
+        </div>
+
+        <div class="main-section">
+          <div class="footer-section2">
+            <h5>Our Technologies</h5>
+            <br />
+            <ul>
+              <li><a href="#">ReactJS</a></li>
+              <li><a href="#">Gatsby</a></li>
+              <li><a href="#">NextJS</a></li>
+              <li><a href="#">NodeJS</a></li>
+            </ul>
+          </div>
+          <div class="footer-section3">
+            <h5>Our Services</h5>
+            <br />
+            <ul>
+              <li><a href="#">Social Media Marketing</a></li>
+              <li>
+                <a href="#">Web & Mobile App Development</a>
+              </li>
+              <li><a href="#">Data & Analytics</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="footer-bottom">
+        <div class="inner-footer">
+          <p>Privacy Policy | Terms & Conditions</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleFaq(element) {
+        const faqItem = element.closest(".faq-item");
+        const faqContent = faqItem.querySelector(".faq-content");
+        const icon = faqItem.querySelector(".icon");
+        const question = faqItem.querySelector(".faq-question");
+
+        // Toggle display of the answer
+        faqContent.style.display =
+          faqContent.style.display === "block" ? "none" : "block";
+
+        // Toggle the icon between "+" and "-"
+        icon.textContent = icon.textContent === "+" ? "-" : "+";
+
+        question.style.color =
+          faqContent.style.display === "block" ? "#6B3CC9" : "";
+
+        faqContent.style.color =
+          faqContent.style.display === "block" ? "#6f6c90" : "";
+      }
+    </script>
+
+    <script>
+      function toggleMenu() {
+        const nav = document.querySelector("header nav");
+        nav.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
